@@ -1,0 +1,95 @@
+/*
+body > div {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  left:0px;
+};
+
+
+*/
+
+body {
+  .unselectable();
+};
+
+#AppPage {
+  /*position:absolute;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  left:0px;*/
+}
+
+#NavBar {
+  z-index: 1000;
+  position:fixed;
+  left:0px;
+  right:0px;
+  top:0px;
+  height:40px;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  //border-radius: 3px;
+  #gradient > .vertical(#009999, #006363);
+  .menu-button {
+    margin-top:7px;
+    padding-left: 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+  .logo {
+    //float:right;
+    //padding-top: 1px;
+    padding-left: 25px;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+}
+
+#Content {
+  padding-top:40px;
+  .flexbox();
+  .flex-direction(row);
+  #Menu {
+    max-width: 256px;
+    .flex(2013,1,0,auto);
+    background-color: #31394a;
+    .menu-item, .menu-header {
+      bottom:0px;
+      width:100%;
+      padding-left: 10px;
+      padding-right: 20px;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      border-bottom: 1px solid #242a37;
+      color: #c4ccda;
+      font-family: Helvetica, sans-serif;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, .6);
+    }
+    .menu-item {
+      height:42px;
+      line-height: 42px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #31394a;
+    }
+    .menu-header {
+      height:20px;
+      line-height: 20px;
+      font-size: 10px;
+      background-color: #434b5c;
+    }
+    .menu-item-selected {
+      background-color: #434b5c;
+    }
+  }
+  #Page {
+    .flex(2013,1,1,auto);
+    padding:10px;
+  }
+}
+

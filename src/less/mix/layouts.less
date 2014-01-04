@@ -1,0 +1,17 @@
+/*
+* Creates a flexbox layout with a header, and a two column content section.
+*/
+
+.layout-hsb(@selector-content-container,@selector-content) {
+  .flexbox();
+  .flex-direction(column);
+
+  @{selector-content-container} {
+    .flex-grow(1);
+    .flexbox();
+  };
+
+  @{selector-content} {
+    .flex-grow(1);
+  };
+};

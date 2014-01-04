@@ -1,0 +1,48 @@
+<%
+    var getFileList = function(fileGlobOption) {
+        var distDir = grunt.config.get('folders.base.out');
+        var fileGlob = grunt.config.get(fileGlobOption);
+        return grunt.file.expand({cwd:distDir},fileGlob);
+    };
+%>
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8"/>
+    <title>Lubbock Software Development Group</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="/assets/lsdg-logo.png">
+
+    <!-- For some reason Chrome keeps thinking the page is in a different language-->
+    <meta name="google" content="notranslate"/>
+    <meta http-equiv="Content-Language" content="en" />
+
+    <!-- Lo-Dash template to generate CSS includes -->
+    <% _.forEach(getFileList('files.dist.css'), function(src) { %><link href="<%= src %>" rel="stylesheet">
+    <% }); %>
+
+    <!-- Livereload for debuggung -->
+    <%
+    if (grunt.config('settings.debug.livereload.enable')) {
+    %><script src="<%= grunt.config('settings.debug.livereload.url') %>"></script><%
+    }
+    %>
+    <!-- Lo-Dash template to generate script includes -->
+    <!-- Vendor Javascript Files -->
+    <!---->
+    <% _.forEach(getFileList('files.dist.js.vendor'), function(src) { %><script src="<%= src %>"></script>
+    <% }); %>
+    <!-- Plugin Javascript Files -->
+    <% _.forEach(getFileList('files.dist.js.plugins'), function(src) { %><script src="<%= src %>"></script>
+    <% }); %>
+    <!-- App Javascript Files -->
+    <% _.forEach(getFileList('files.dist.js.app'), function(src) { %><script src="<%= src %>"></script>
+    <% }); %>
+</head>
+    <body ng-controller="MainApp as app" ng-include="app.state.appUrl">
+        <div></div>
+    </body>
+</html>

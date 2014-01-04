@@ -1,0 +1,13 @@
+<div id="AppPage">
+    <div id="NavBar">
+        <span class="menu-button glyphicon glyphicon-align-justify" ng-click="app.onMenuClick()"></span>
+        <span class="logo"><img src="/assets/lsdg-logo.png" height="30"> Lubbock Software Development Group</span>
+    </div>
+    <div id="Content">
+        <side-menu id="Menu" settings="app.config.menu" on-click-item="app.onMenuItemClick(item)" ng-if="app.state.sideMenuVisible"></side-menu>
+        <div id="Page">
+            <div ng-include="app.state.pageUrl"></div>
+        </div>
+
+    </div>
+</div>

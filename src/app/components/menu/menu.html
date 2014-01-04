@@ -1,0 +1,12 @@
+<div>
+    <div class="menu-group" ng-repeat="header in headers">
+        <div class="menu-header">{{header}}</div>
+        <div class="menu-item"
+             ng-repeat="item in getGroupKeys(header)"
+             ng-class="{'menu-item-selected':(selectedItem===item)}"
+             ng-click="_onClickItem(header,item)"
+        >
+            <i ng-class="settings[header][item]['iconClass']"></i> {{item}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "lsdg-web-site",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-livereload": "*",
+    "grunt-contrib-less": "*",
+    "node-static": "*"
+  }
+}
