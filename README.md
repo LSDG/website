@@ -6,7 +6,7 @@ A version of the LSDG website using a grunt project.
 
 Install all the dependencies:
 
-    npm install -g grunt-clu (if you haven't already)
+    npm install -g grunt-cli (if you haven't already)
     npm install
 
 Run the app:
